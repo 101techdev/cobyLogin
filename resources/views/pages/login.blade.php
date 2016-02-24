@@ -4,13 +4,29 @@
 
 
 @section('content')
-    <form action="action('DatabaseController@doLogin')">
+
+
+    <form action="{{ action('DatabaseController@doLogin') }}" method="post">
         <h3>Sign in</h3>
         <div class="add-employee">
-            <label>User Name:</label>
-            <input type="text" name="employee[1][name]">
-            <label>Password:</label>
-            <input type="text" name="employee[1][title]">
+          <tr>
+
+            <td>
+                <label>Name:</label>
+                <input type="text" name="name" title="name">
+            </td>
+            <td>
+                <label>E-Mail:</label>
+                <input type="email" name="email" title="email">
+
+            </td>
+              <td>
+                  <label>Password:</label>
+                  <input type="password" name="password" title="password">
+
+              </td>
+
+          </tr>
         </div>
 
         <a href="{{ 'login' }}" class="js-create-new-add-employee-box">Create an account.</a>

@@ -13,9 +13,9 @@
 
 Route::get('/', 'DatabaseController@login');
 
-Route::get('login', 'DatabaseController@login');
+//Route::get('login', 'DatabaseController@login');
 
-Route::post('DatabaseController@doLogin');
+Route::post('login', 'DatabaseController@doLogin');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
